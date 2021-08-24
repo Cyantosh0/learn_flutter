@@ -24,7 +24,10 @@ class MyEditTextState extends State<MyEditText> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               TextField(
-                decoration: InputDecoration(hintText: "Enter text here..."),
+                decoration: InputDecoration(
+                    hintText: "Add your comments for the photo",
+                    filled: true,
+                    fillColor: Colors.white),
                 onSubmitted: (String str) {
                   setState(() {
                     results = results + "\n" + str;
@@ -33,10 +36,19 @@ class MyEditTextState extends State<MyEditText> {
                 },
                 controller: controller,
               ),
-              Text(results)
+              Text(
+                results,
+                style: TextStyle(
+                    fontSize: 26,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w700),
+              ),
             ],
           ),
         ),
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/images/bg.png'), fit: BoxFit.cover)),
       ),
     );
   }
