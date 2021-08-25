@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
-import 'widgets/enter_text_widget.dart';
+import 'widgets/grid_layout_widget.dart';
 
 class App extends StatelessWidget {
+  final MyGridView myGridView = MyGridView();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyEditText(),
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-        accentColor: Colors.lightGreenAccent,
-        backgroundColor: Colors.black12,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("GridView Example"),
+        ),
+        body: myGridView.build(),
       ),
     );
   }
