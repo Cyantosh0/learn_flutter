@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
-import 'widgets/tabs_widget.dart';
+import 'package:learn_flutter/src/screens/home/home.dart';
 
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: TabBarDemo(),
+      home: HomePage(),
       theme: ThemeData(
-        primarySwatch: Colors.green,
-        accentColor: Colors.lightGreenAccent,
-        backgroundColor: Colors.black12,
+        backgroundColor: Colors.cyan[50],
       ),
     );
   }
