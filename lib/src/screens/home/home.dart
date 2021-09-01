@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learn_flutter/src/screens/home/widgets/bottom_navigation_bar.dart';
 import 'package:learn_flutter/src/screens/home/widgets/header.dart';
 import 'package:learn_flutter/src/screens/home/widgets/page_description.dart';
 
@@ -14,6 +15,7 @@ class HomePage extends StatelessWidget {
           children: [PageDescription()],
         ),
       ),
+      bottomNavigationBar: CustomBottomNavigationBar(),
     );
   }
 }
